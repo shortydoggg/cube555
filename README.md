@@ -15,7 +15,7 @@ Memory required: <= 500MB
 Demo with a simple GUI
 
 ```
-git clone https://github.com/cs0x7f/cube555.git
+git clone https://github.com/shortydoggg/cube555.git
 cd cube555
 mkdir dist
 make run
