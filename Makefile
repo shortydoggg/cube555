@@ -35,17 +35,19 @@ TWOPHASE = lib/twophase.jar
 build: $(DIST)
 
 $(DIST): $(SRC) $(MAINPROG)
+	@if not exist dist/ mkdir dist
 	@$(JAVAC) -d dist -cp $(TWOPHASE) $(SRC) $(MAINPROG)
-	@cp -f $(SRC) dist/cs/cube555/
-	@cp -r lib dist
-	@cd dist && jar cfm cube555.jar ../cube555.mf lib ui/*.class cs/cube555/*.class cs/cube555/*.java
+	@cp -rf lib/ dist
+	@cd dist && jar cfm cube555.jar ../cube555.mf ui/* cs/*
 
 run: $(DIST)
 	@java -jar $(DIST)
 
 test: $(DIST) $(TEST)
 	@$(JAVAC) -d dist -cp $(DIST) $(TEST)
-	@java -cp dist:$(DIST) test
+	@java -cp dist;$(DIST) test
 
 clean:
-	@rm -rf dist/*
+	@rm -rf dist/
+	@if exist *.jhdata rm -f *.jhdata
+	@if exist *.jpdata rm -f *.jpdata
