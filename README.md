@@ -21,6 +21,10 @@ mkdir dist
 make run
 ```
 
+# Algorithm
+ - [Tsai's 8-step 4x4x4 algorithm](http://cubezzz.duckdns.org/drupal/?q=node/view/73#comment-2588)
+ - The solver merges Tsai's step3 and step4 into one step and use [min2phase package](https://github.com/shortydoggg/min2phase) to replace Tsai's step5-8
+
 At first execution, some pruning tables (about 240MB) are written to disk for cache.
 
 # License GPLv3
