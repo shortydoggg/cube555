@@ -21,11 +21,11 @@ mkdir dist
 make run
 ```
 
-At first execution, some pruning tables (about 240MB) are written to disk for cache.
-
 # Algorithm
  - [Tsai's 8-step 4x4x4 algorithm](http://cubezzz.duckdns.org/drupal/?q=node/view/73#comment-2588)
- - The solver merges Tsai's step 3 and step 4 into one step and use [min2phase package](https://github.com/shortydoggg/min2phase) to replace Tsai's step 5-8
+ - The solver merges Tsai's steps 3 and steps 4 into one step and use [min2phase package](https://github.com/shortydoggg/min2phase) to replace Tsai's steps 5-8.
+
+At first execution, some pruning tables (about 240MB) are written to disk for cache.
 
 # License GPLv3
 
